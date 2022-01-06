@@ -1,7 +1,8 @@
 import hashlib # for SHA256 computation
 import binascii # for conversion between Hexa and bytes
+import secrets
 
-entropy = "c10ec20dc3cd9f652c7fac2f1230f7a3c828389a14392f05" 
+entropy = secrets.token_hex(16) 
 
 data = entropy.strip() #cleaning of data
 data = binascii.unhexlify(data)
